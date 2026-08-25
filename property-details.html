@@ -1,0 +1,901 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luxury Modern Villa | Lahari's Real Estate Agency</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+
+        /* ================= PROPERTY DETAILS ================= */
+
+        .details-page {
+
+            padding: 70px 7% 110px;
+
+            background: #0b0b0b;
+
+        }
+
+
+        /* BREADCRUMB */
+
+        .breadcrumb {
+
+            margin-bottom: 30px;
+
+            color: #777;
+
+            font-size: 12px;
+
+        }
+
+
+        .breadcrumb a {
+
+            color: var(--gold);
+
+        }
+
+
+        /* MAIN IMAGE */
+
+        .main-property-image {
+
+            width: 100%;
+
+            height: 550px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            border: 1px solid #292929;
+
+        }
+
+
+        .main-property-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .sale-badge {
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 20px;
+
+            background: var(--gold);
+
+            color: #000;
+
+            padding: 8px 15px;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* PROPERTY CONTENT */
+
+        .details-content {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr;
+
+            gap: 50px;
+
+            margin-top: 45px;
+
+        }
+
+
+        .details-left h1 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 48px;
+
+            line-height: 1.15;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .details-location {
+
+            color: #999;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .details-price {
+
+            color: var(--gold);
+
+            font-size: 28px;
+
+            font-weight: 600;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* FEATURES */
+
+        .property-features {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top: 1px solid #292929;
+
+            border-bottom: 1px solid #292929;
+
+            padding: 25px 0;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .feature {
+
+            text-align: center;
+
+            border-right: 1px solid #292929;
+
+        }
+
+
+        .feature:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .feature strong {
+
+            display: block;
+
+            color: #fff;
+
+            font-size: 16px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .feature span {
+
+            color: #777;
+
+            font-size: 11px;
+
+        }
+
+
+        /* DESCRIPTION */
+
+        .details-left h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .description {
+
+            color: #999;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* AMENITIES */
+
+        .amenities {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .amenity {
+
+            background: #151515;
+
+            border: 1px solid #292929;
+
+            padding: 13px;
+
+            color: #bbb;
+
+            font-size: 12px;
+
+        }
+
+
+        .amenity span {
+
+            color: var(--gold);
+
+            margin-right: 8px;
+
+        }
+
+
+        /* CONTACT CARD */
+
+        .agent-card {
+
+            background: #151515;
+
+            border: 1px solid #292929;
+
+            padding: 30px;
+
+            position: sticky;
+
+            top: 110px;
+
+        }
+
+
+        .agent-card h3 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .agent-card > p {
+
+            color: #888;
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .agent-info {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .agent-photo {
+
+            width: 55px;
+
+            height: 55px;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #000;
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+        }
+
+
+        .agent-info h4 {
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .agent-info span {
+
+            color: #777;
+
+            font-size: 10px;
+
+        }
+
+
+        .agent-contact {
+
+            border-top: 1px solid #292929;
+
+            padding-top: 20px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .agent-contact p {
+
+            color: #aaa;
+
+            font-size: 12px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .agent-card .primary-btn {
+
+            width: 100%;
+
+            text-align: center;
+
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .details-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .agent-card {
+
+                position: static;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .main-property-image {
+
+                height: 350px;
+
+            }
+
+
+            .details-left h1 {
+
+                font-size: 36px;
+
+            }
+
+
+            .property-features {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+            }
+
+
+            .feature {
+
+                border-right: none;
+
+            }
+
+
+            .amenities {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>LAHARI'S</span>
+
+            <small>REAL ESTATE AGENCY</small>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="nav-btn">
+            Get Started
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= PROPERTY DETAILS ================= -->
+
+    <main class="details-page">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            &nbsp; / &nbsp;
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            &nbsp; / &nbsp;
+
+            Luxury Modern Villa
+
+        </div>
+
+
+
+        <!-- MAIN IMAGE -->
+
+        <div class="main-property-image">
+
+            <img src="images/house1.jpg"
+                alt="Luxury Modern Villa">
+
+            <span class="sale-badge">
+                FOR SALE
+            </span>
+
+        </div>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="details-content">
+
+
+            <!-- LEFT -->
+
+            <div class="details-left">
+
+
+                <h1>
+                    Luxury Modern Villa
+                </h1>
+
+
+                <p class="details-location">
+                    📍 Jubilee Hills, Hyderabad, Telangana
+                </p>
+
+
+                <div class="details-price">
+                    ₹2.45 Crore
+                </div>
+
+
+
+                <!-- FEATURES -->
+
+                <div class="property-features">
+
+                    <div class="feature">
+
+                        <strong>4</strong>
+
+                        <span>
+                            Bedrooms
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <strong>3</strong>
+
+                        <span>
+                            Bathrooms
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <strong>3,200</strong>
+
+                        <span>
+                            Sq. Ft.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <h2>
+                    About This Property
+                </h2>
+
+
+                <p class="description">
+
+                    Welcome to this stunning modern villa located
+                    in one of Hyderabad's most desirable
+                    neighbourhoods. Designed with elegance,
+                    comfort and modern living in mind, this
+                    property offers spacious interiors and
+                    beautiful outdoor spaces.
+
+                    <br><br>
+
+                    The villa features large bedrooms, a
+                    contemporary kitchen, spacious living areas
+                    and premium finishes throughout the home.
+                    Perfect for families looking for a luxurious
+                    and peaceful lifestyle.
+
+                </p>
+
+
+
+                <!-- AMENITIES -->
+
+                <h2>
+                    Property Features
+                </h2>
+
+
+                <div class="amenities">
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Modern Modular Kitchen
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Private Garden
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Covered Parking
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        24/7 Security
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Smart Home Features
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Premium Flooring
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Power Backup
+                    </div>
+
+                    <div class="amenity">
+                        <span>✓</span>
+                        Gated Community
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RIGHT / AGENT -->
+
+            <aside class="agent-card">
+
+
+                <h3>
+                    Interested in this property?
+                </h3>
+
+
+                <p>
+                    Get in touch with our property
+                    specialist today.
+                </p>
+
+
+
+                <div class="agent-info">
+
+                    <div class="agent-photo">
+                        L
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Lahari
+                        </h4>
+
+                        <span>
+                            Senior Property Consultant
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="agent-contact">
+
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p>
+                        ✉️ info@laharisrealestate.com
+                    </p>
+
+                    <p>
+                        🕐 Mon - Sat | 9:00 AM - 6:00 PM
+                    </p>
+
+                </div>
+
+
+                <a href="contact.html"
+                    class="primary-btn">
+
+                    Schedule a Visit
+
+                </a>
+
+
+            </aside>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div>
+
+            <p>
+                YOUR DREAM HOME IS WAITING
+            </p>
+
+            <h2>
+                Ready to Take the
+                <span>Next Step?</span>
+            </h2>
+
+            <a href="contact.html"
+                class="primary-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                LAHARI'S
+            </h2>
+
+            <p>
+                Real Estate Agency
+            </p>
+
+            <span>
+                Where Luxury Meets Your Lifestyle.
+            </span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Hyderabad, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉️ info@laharisrealestate.com
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Lahari's Real Estate Agency.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

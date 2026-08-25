@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Lahari's Real Estate Agency</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+
+        /* ================= ABOUT HERO ================= */
+
+        .about-hero {
+
+            min-height: 450px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.78),
+                    rgba(0, 0, 0, 0.88)
+                ),
+                url("images/house5.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .about-hero h1 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 65px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-hero h1 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .about-hero p {
+
+            color: #aaaaaa;
+
+            font-size: 14px;
+
+            max-width: 600px;
+
+            margin: auto;
+
+        }
+
+
+        /* ================= ABOUT INTRO ================= */
+
+        .about-intro {
+
+            padding: 110px 7%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+            background: #0b0b0b;
+
+        }
+
+
+        .about-image {
+
+            height: 500px;
+
+            overflow: hidden;
+
+            border: 1px solid #292929;
+
+        }
+
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+
+        }
+
+
+        .about-image:hover img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        .about-text .section-label {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-text h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 48px;
+
+            line-height: 1.15;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .about-text h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .about-text p {
+
+            color: #999999;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        /* ================= MISSION ================= */
+
+        .mission {
+
+            background: #111111;
+
+            padding: 100px 7%;
+
+            text-align: center;
+
+        }
+
+
+        .mission h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 45px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .mission h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .mission-description {
+
+            max-width: 700px;
+
+            margin: 0 auto 60px;
+
+            color: #999999;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .mission-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .mission-card {
+
+            background: #171717;
+
+            border: 1px solid #292929;
+
+            padding: 40px 25px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .mission-card:hover {
+
+            border-color: var(--gold);
+
+            transform: translateY(-5px);
+
+        }
+
+
+        .mission-icon {
+
+            width: 60px;
+
+            height: 60px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #222222;
+
+            border: 1px solid #3a3a3a;
+
+            color: var(--gold);
+
+            font-size: 25px;
+
+        }
+
+
+        .mission-card h3 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .mission-card p {
+
+            color: #888888;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+
+            padding: 110px 7%;
+
+            background: #0b0b0b;
+
+        }
+
+
+        .services-heading {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .services-heading h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 45px;
+
+        }
+
+
+        .services-heading h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .service-card {
+
+            border: 1px solid #292929;
+
+            padding: 35px 22px;
+
+            background: #111111;
+
+            transition: 0.3s;
+
+        }
+
+
+        .service-card:hover {
+
+            border-color: var(--gold);
+
+        }
+
+
+        .service-card h3 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 20px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .service-card p {
+
+            color: #888888;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .service-number {
+
+            color: var(--gold);
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* ================= TEAM ================= */
+
+        .team {
+
+            padding: 110px 7%;
+
+            background: #111111;
+
+        }
+
+
+        .team-heading {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .team-heading h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 45px;
+
+        }
+
+
+        .team-heading h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .team-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .team-card {
+
+            background: #171717;
+
+            border: 1px solid #292929;
+
+            text-align: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .team-photo {
+
+            height: 280px;
+
+            overflow: hidden;
+
+        }
+
+
+        .team-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+
+        }
+
+
+        .team-card:hover .team-photo img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .team-info {
+
+            padding: 25px;
+
+        }
+
+
+        .team-info h3 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 22px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .team-info span {
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .team-info p {
+
+            color: #777777;
+
+            font-size: 11px;
+
+            margin-top: 12px;
+
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .about-intro {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .mission-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+            .team-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .about-hero h1 {
+
+                font-size: 45px;
+
+            }
+
+
+            .about-text h2 {
+
+                font-size: 38px;
+
+            }
+
+
+            .about-image {
+
+                height: 380px;
+
+            }
+
+
+            .mission-grid,
+
+            .services-grid,
+
+            .team-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>LAHARI'S</span>
+
+            <small>REAL ESTATE AGENCY</small>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html" class="active">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="nav-btn">
+            Get Started
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div>
+
+            <p class="section-label">
+                WHO WE ARE
+            </p>
+
+            <h1>
+                About <span>Lahari's</span>
+            </h1>
+
+            <p>
+                Creating meaningful connections between people
+                and the places they call home.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="about-intro">
+
+
+        <div class="about-image">
+
+            <img src="images/house5.jpg"
+                alt="Luxury Property">
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="section-label">
+                OUR STORY
+            </p>
+
+            <h2>
+                More Than
+                <span>Real Estate.</span>
+            </h2>
+
+
+            <p>
+
+                Lahari's Real Estate Agency was created with a
+                simple vision — to make finding the right property
+                easier, smarter and more enjoyable.
+
+            </p>
+
+
+            <p>
+
+                We connect individuals, families and businesses
+                with carefully selected properties across
+                India's growing cities.
+
+            </p>
+
+
+            <p>
+
+                From luxury villas and modern apartments to
+                investment properties, our team is committed to
+                providing professional guidance at every step.
+
+            </p>
+
+
+            <a href="properties.html"
+                class="primary-btn">
+
+                Explore Properties
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MISSION ================= -->
+
+    <section class="mission">
+
+
+        <p class="section-label">
+            WHAT DRIVES US
+        </p>
+
+
+        <h2>
+            Our <span>Mission</span>
+        </h2>
+
+
+        <p class="mission-description">
+
+            Our mission is to transform the real estate experience
+            by combining trust, transparency and modern technology
+            to help our clients make confident property decisions.
+
+        </p>
+
+
+
+        <div class="mission-grid">
+
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Client First
+                </h3>
+
+                <p>
+
+                    Your needs and dreams come first.
+                    We listen carefully and provide solutions
+                    tailored to your lifestyle.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Trust & Transparency
+                </h3>
+
+                <p>
+
+                    We believe in honest communication,
+                    transparent processes and long-term
+                    relationships.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    Excellence
+                </h3>
+
+                <p>
+
+                    From property selection to closing,
+                    we aim to deliver an exceptional experience
+                    at every stage.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+
+        <div class="services-heading">
+
+            <p class="section-label">
+                WHAT WE OFFER
+            </p>
+
+            <h2>
+                Our <span>Services</span>
+            </h2>
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Property Sales
+                </h3>
+
+                <p>
+
+                    Find your perfect property from
+                    our curated collection of homes,
+                    villas and apartments.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Property Rentals
+                </h3>
+
+                <p>
+
+                    Discover comfortable and premium
+                    rental properties in desirable
+                    locations.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Property Consultation
+                </h3>
+
+                <p>
+
+                    Get professional guidance to
+                    make informed property and
+                    investment decisions.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h3>
+                    Investment Advisory
+                </h3>
+
+                <p>
+
+                    Explore valuable real estate
+                    opportunities designed for
+                    long-term growth.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div>
+
+            <p>
+                LET'S BUILD YOUR FUTURE
+            </p>
+
+            <h2>
+                Your Dream Home
+                <span>Starts Here.</span>
+            </h2>
+
+            <a href="contact.html"
+                class="primary-btn">
+
+                Talk To Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                LAHARI'S
+            </h2>
+
+            <p>
+                Real Estate Agency
+            </p>
+
+            <span>
+                Where Luxury Meets Your Lifestyle.
+            </span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Kurnool, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉️ info@laharisrealestate.com
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Lahari's Real Estate Agency.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
+<!-- ================= OUR TEAM ================= -->
+
+<section class="team">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            MEET OUR TEAM
+        </p>
+
+        <h2>
+            The People Behind
+            <span>Lahari's</span>
+        </h2>
+
+        <p>
+            Our experienced team is dedicated to helping
+            you find the perfect property.
+        </p>
+
+    </div>
+
+
+    <div class="team-grid">
+
+        <!-- AGENT 1 -->
+
+        <div class="agent-card">
+
+            <div class="agent-image">
+
+                <img src="images/agent1..jpg"
+                     alt="Real Estate Agent">
+
+            </div>
+
+            <div class="agent-info">
+
+                <h3>
+                    Lahari
+                </h3>
+
+                <p>
+                    FOUNDER and CEO          
+                    
+                </p>
+
+                <span>
+                    
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT 2 -->
+
+        <div class="agent-card">
+
+            <div class="agent-image">
+
+                <img src="images/agent2.jpg"
+                     alt="Real Estate Agent">
+
+            </div>
+
+            <div class="agent-info">
+
+                <h3>
+                    Arjun Varma
+                </h3>
+
+                <p>
+                    Real Estate Advisor
+                </p>
+
+                <span>
+                    Investment & Commercial Properties
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- AGENT 3 -->
+
+        <div class="agent-card">
+
+            <div class="agent-image">
+
+                <img src="images/agent3.jpg"
+                     alt="Real Estate Agent">
+
+            </div>
+
+            <div class="agent-info">
+
+                <h3>
+                    Meera Sharma
+                </h3>
+
+                <p>
+                    Property Consultant
+                </p>
+
+                <span>
+                    Villas & Premium Homes
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

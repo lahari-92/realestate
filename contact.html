@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Lahari's Real Estate Agency</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+
+        /* ================= CONTACT HERO ================= */
+
+        .contact-hero {
+
+            min-height: 400px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.80),
+                    rgba(0, 0, 0, 0.88)
+                ),
+                url("images/house6.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .contact-hero h1 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 65px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact-hero h1 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .contact-hero p {
+
+            color: #aaaaaa;
+
+            max-width: 600px;
+
+            margin: auto;
+
+            font-size: 14px;
+
+        }
+
+
+        /* ================= CONTACT SECTION ================= */
+
+        .contact-section {
+
+            padding: 110px 7%;
+
+            background: #0b0b0b;
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.5fr;
+
+            gap: 70px;
+
+        }
+
+
+        /* ================= CONTACT INFO ================= */
+
+        .contact-info h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .contact-info h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .contact-description {
+
+            color: #888888;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            gap: 18px;
+
+            padding: 20px 0;
+
+            border-bottom: 1px solid #292929;
+
+        }
+
+
+        .contact-icon {
+
+            min-width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #171717;
+
+            border: 1px solid #333333;
+
+            color: var(--gold);
+
+            font-size: 18px;
+
+        }
+
+
+        .contact-item h3 {
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .contact-item p {
+
+            color: #888888;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* ================= FORM ================= */
+
+        .contact-form-container {
+
+            background: #151515;
+
+            border: 1px solid #292929;
+
+            padding: 45px;
+
+        }
+
+
+        .contact-form-container h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 32px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .form-subtitle {
+
+            color: #777777;
+
+            font-size: 11px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            color: #aaaaaa;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .form-group input,
+
+        .form-group select,
+
+        .form-group textarea {
+
+            width: 100%;
+
+            background: #0d0d0d;
+
+            border: 1px solid #333333;
+
+            color: #ffffff;
+
+            padding: 14px;
+
+            outline: none;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .form-group input:focus,
+
+        .form-group select:focus,
+
+        .form-group textarea:focus {
+
+            border-color: var(--gold);
+
+        }
+
+
+        .form-group textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+
+        }
+
+
+        .form-group select {
+
+            cursor: pointer;
+
+        }
+
+
+        .form-submit {
+
+            width: 100%;
+
+            padding: 15px;
+
+            background: var(--gold);
+
+            border: 1px solid var(--gold);
+
+            color: #000000;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+
+        .form-submit:hover {
+
+            background: transparent;
+
+            color: var(--gold);
+
+        }
+
+
+        /* ================= OFFICE SECTION ================= */
+
+        .office {
+
+            padding: 90px 7%;
+
+            background: #111111;
+
+            text-align: center;
+
+        }
+
+
+        .office h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .office h2 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .office > p {
+
+            color: #888888;
+
+            font-size: 13px;
+
+            margin-bottom: 40px;
+
+        }
+
+
+        .office-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            min-height: 250px;
+
+            border: 1px solid #292929;
+
+            background:
+
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("images/house4.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .office-content {
+
+            background: rgba(10, 10, 10, 0.90);
+
+            padding: 30px 50px;
+
+            border: 1px solid #333333;
+
+        }
+
+
+        .office-content h3 {
+
+            font-family: 'Playfair Display', serif;
+
+            color: var(--gold);
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .office-content p {
+
+            color: #bbbbbb;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .contact-section {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .contact-hero h1 {
+
+                font-size: 45px;
+
+            }
+
+
+            .contact-section {
+
+                padding: 80px 5%;
+
+            }
+
+
+            .contact-form-container {
+
+                padding: 25px;
+
+            }
+
+
+            .form-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .office {
+
+                padding: 70px 5%;
+
+            }
+
+
+            .office-content {
+
+                padding: 25px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>LAHARI'S</span>
+
+            <small>REAL ESTATE AGENCY</small>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="nav-btn">
+            Get Started
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="contact-hero">
+
+        <div>
+
+            <p class="section-label">
+                WE'D LOVE TO HEAR FROM YOU
+            </p>
+
+            <h1>
+                Get In <span>Touch</span>
+            </h1>
+
+            <p>
+                Whether you're buying, selling, renting or
+                simply exploring your options, our team is
+                here to help.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <p class="section-label">
+                CONTACT LAHARI'S
+            </p>
+
+
+            <h2>
+                Let's Start a
+                <span>Conversation.</span>
+            </h2>
+
+
+            <p class="contact-description">
+
+                Have a property in mind or looking for
+                professional real estate advice? Send us
+                a message and our team will get back to
+                you as soon as possible.
+
+            </p>
+
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h3>
+                        Our Office
+                    </h3>
+
+                    <p>
+                        A-camp,<br>
+                        Kurnool, Andhra pradesh, India
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <div>
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        info@laharisrealestate.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HOURS -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ◷
+                </div>
+
+                <div>
+
+                    <h3>
+                        Working Hours
+                    </h3>
+
+                    <p>
+                        Monday - Saturday<br>
+                        9:00 AM - 6:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= CONTACT FORM ================= -->
+
+        <div class="contact-form-container">
+
+            <h2>
+                Send Us a Message
+            </h2>
+
+            <p class="form-subtitle">
+                Fill in the details below and we'll get
+                back to you shortly.
+            </p>
+
+
+            <form id="contactForm">
+
+
+                <!-- NAME + EMAIL -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            FULL NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE + PROPERTY TYPE -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            PHONE NUMBER
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="+91 XXXXX XXXXX"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="propertyType">
+                            PROPERTY INTEREST
+                        </label>
+
+                        <select id="propertyType">
+
+                            <option>
+                                Select Property Type
+                            </option>
+
+                            <option>
+                                Buy a Property
+                            </option>
+
+                            <option>
+                                Rent a Property
+                            </option>
+
+                            <option>
+                                Sell a Property
+                            </option>
+
+                            <option>
+                                Property Investment
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        YOUR MESSAGE
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us what you're looking for..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="form-submit">
+
+                    Send Message →
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= OFFICE ================= -->
+
+    <section class="office">
+
+
+        <p class="section-label">
+            VISIT US
+        </p>
+
+
+        <h2>
+            Our <span>Office</span>
+        </h2>
+
+
+        <p>
+            We'd be happy to welcome you and discuss
+            your real estate needs.
+        </p>
+
+
+
+        <div class="office-box">
+
+            <div class="office-content">
+
+                <h3>
+                    Lahari's Real Estate Agency
+                </h3>
+
+                <p>
+
+                    Jubilee Hills, Hyderabad<br>
+
+                    Telangana, India<br><br>
+
+                    Monday - Saturday | 9:00 AM - 6:00 PM
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div>
+
+            <p>
+                YOUR DREAM PROPERTY IS CLOSER THAN YOU THINK
+            </p>
+
+            <h2>
+                Let's Find It
+                <span>Together.</span>
+            </h2>
+
+            <a
+                href="properties.html"
+                class="primary-btn">
+
+                Explore Properties
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                LAHARI'S
+            </h2>
+
+            <p>
+                Real Estate Agency
+            </p>
+
+            <span>
+                Where Luxury Meets Your Lifestyle.
+            </span>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Hyderabad, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉️ info@laharisrealestate.com
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Lahari's Real Estate Agency.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

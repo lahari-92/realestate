@@ -1,0 +1,880 @@
+/* =====================================================
+   LAHARI'S REAL ESTATE AGENCY
+   MAIN STYLESHEET
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ================= COLORS ================= */
+
+:root {
+    --gold: #20C4C7;
+    --gold-light: #5DE1DF;
+    --black: #081A2B;
+    --dark: #0D2638;
+    --card: #123047;
+    --border: #24465A;
+    --text-light: #F4F8FA;
+    --text-muted: #9BB0BC;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+    padding: 18px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: #081A2B;
+    border-bottom: 1px solid #242424;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    color: var(--gold);
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: -2px;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #aaaaaa;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--gold);
+}
+
+
+/* NAV BUTTON */
+
+.nav-btn {
+    padding: 11px 20px;
+
+    background: var(--gold);
+    color: #000000;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: var(--gold-light);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 7%;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.82)
+        ),
+        url("../images/house1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 720px;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(50px, 6vw, 82px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #bbbbbb;
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.primary-btn {
+    display: inline-block;
+
+    padding: 14px 27px;
+
+    background: var(--gold);
+    color: #000000;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border: 1px solid var(--gold);
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    display: inline-block;
+
+    padding: 14px 27px;
+
+    border: 1px solid #777777;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+
+/* ================= SEARCH BOX ================= */
+
+.search-section {
+    padding: 0 7%;
+    position: relative;
+    margin-top: -55px;
+    z-index: 10;
+}
+
+.search-box {
+    background: #151515;
+    border: 1px solid #333333;
+
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+
+    gap: 15px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.search-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.search-item label {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.search-item select {
+    background: #0d0d0d;
+    border: 1px solid #333333;
+    color: #bbbbbb;
+
+    padding: 13px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    align-self: end;
+
+    padding: 13px 25px;
+
+    background: var(--gold);
+    color: #000000;
+
+    border: 1px solid var(--gold);
+
+    cursor: pointer;
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+
+/* ================= SECTION COMMON ================= */
+
+section {
+    width: 100%;
+}
+
+.collection {
+    padding: 120px 7% 90px;
+    background: #0b0b0b;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 span {
+    color: var(--gold);
+}
+
+.section-heading p {
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* ================= PROPERTY GRID ================= */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.property-card {
+    background: #151515;
+    border: 1px solid #292929;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.property-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-7px);
+}
+
+
+/* PROPERTY IMAGE */
+
+.property-image {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    background: #111111;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.06);
+}
+
+
+/* PROPERTY TAG */
+
+.property-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: var(--gold);
+    color: #000000;
+
+    padding: 7px 12px;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* PROPERTY INFO */
+
+.property-info {
+    padding: 22px;
+}
+
+.property-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.location {
+    color: #777777;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.property-details {
+    display: flex;
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+
+    color: #888888;
+
+    font-size: 9px;
+}
+
+.property-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 18px;
+}
+
+.property-bottom strong {
+    color: var(--gold);
+    font-size: 15px;
+}
+
+.property-bottom a {
+    color: #bbbbbb;
+    font-size: 9px;
+    transition: 0.3s;
+}
+
+.property-bottom a:hover {
+    color: var(--gold);
+}
+
+
+/* ================= WHY US ================= */
+
+.why-us {
+    padding: 110px 7%;
+    background: #111111;
+}
+
+.why-content {
+    max-width: 750px;
+}
+
+.why-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.why-content h2 span {
+    color: var(--gold);
+}
+
+.why-content p {
+    color: #888888;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.features {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-box {
+    padding: 30px;
+
+    background: #171717;
+    border: 1px solid #292929;
+
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    border-color: var(--gold);
+}
+
+.feature-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #777777;
+    font-size: 11px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+    padding: 100px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("../images/house6.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.cta p {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.cta h2 span {
+    color: var(--gold);
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 70px 7% 45px;
+
+    background: #080808;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+
+    gap: 50px;
+
+    border-top: 1px solid #222222;
+}
+
+.footer-brand h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+}
+
+.footer-brand p {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-brand span {
+    color: #666666;
+    font-size: 11px;
+}
+
+.footer h3 {
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-links a {
+    color: #777777;
+    font-size: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-contact p {
+    color: #777777;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+.copyright {
+    background: #050505;
+
+    border-top: 1px solid #1d1d1d;
+
+    text-align: center;
+
+    padding: 18px;
+
+    color: #555555;
+
+    font-size: 9px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-btn {
+        grid-column: span 2;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 80px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .search-section {
+        padding: 0 5%;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    .search-btn {
+        grid-column: auto;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .collection,
+    .why-us {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+/* ================= OUR TEAM ================= */
+
+.team {
+    padding: 110px 7%;
+    background: #0b0b0b;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.agent-card {
+    background: #151515;
+    border: 1px solid #292929;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.agent-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.agent-image {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    background: #111111;
+}
+
+.agent-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.agent-card:hover .agent-image img {
+    transform: scale(1.05);
+}
+
+.agent-info {
+    padding: 25px;
+}
+
+.agent-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.agent-info p {
+    color: var(--gold);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.agent-info span {
+    color: #777777;
+    font-size: 10px;
+}
+
+
+/* Team responsive */
+
+@media (max-width: 900px) {
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ================= LOGO ================= */
+/* ================= LAHARI'S LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    background: var(--gold);
+    color: #081A2B;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 700;
+
+    border-radius: 4px;
+    transform: rotate(45deg);
+}
+
+.logo-mark::before {
+    content: "L";
+    transform: rotate(-45deg);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text span {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-text small {
+    color: var(--gold);
+    font-size: 7px;
+    letter-spacing: 2px;
+    margin-top: -2px;
+}

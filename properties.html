@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Properties | Lahari's Real Estate Agency</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* ================= PROPERTIES PAGE ================= */
+
+        .properties-hero {
+
+            min-height: 420px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.78),
+                    rgba(0,0,0,0.85)
+                ),
+                url("images/house4.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .properties-hero h1 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 65px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .properties-hero h1 span {
+
+            color: var(--gold);
+
+        }
+
+
+        .properties-hero p {
+
+            color: #aaaaaa;
+
+            max-width: 600px;
+
+            margin: auto;
+
+            font-size: 14px;
+
+        }
+
+
+        /* FILTER */
+
+        .filter-section {
+
+            padding: 60px 7% 20px;
+
+            background: #0b0b0b;
+
+        }
+
+
+        .filter-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .filter-btn {
+
+            padding: 12px 25px;
+
+            background: #151515;
+
+            color: #aaaaaa;
+
+            border: 1px solid #333333;
+
+            cursor: pointer;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .filter-btn:hover,
+
+        .filter-btn.active {
+
+            background: var(--gold);
+
+            color: #000;
+
+            border-color: var(--gold);
+
+        }
+
+
+        /* ALL PROPERTIES */
+
+        .all-properties {
+
+            padding: 60px 7% 120px;
+
+            background: #0b0b0b;
+
+        }
+
+
+        .properties-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .properties-header h2 {
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 35px;
+
+        }
+
+
+        .properties-header p {
+
+            color: #888888;
+
+            font-size: 12px;
+
+        }
+
+
+        /* PROPERTY CARD EXTRA */
+
+        .property-card {
+
+            cursor: pointer;
+
+        }
+
+
+        .property-card.hidden {
+
+            display: none;
+
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            .properties-hero h1 {
+
+                font-size: 45px;
+
+            }
+
+            .properties-header {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 8px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>LAHARI'S</span>
+
+            <small>REAL ESTATE AGENCY</small>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+
+            <a href="properties.html" class="active">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="nav-btn">
+            Get Started
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="properties-hero">
+
+        <div>
+
+            <p class="section-label">
+                FIND YOUR PERFECT PROPERTY
+            </p>
+
+            <h1>
+                Explore Our
+                <span>Properties</span>
+            </h1>
+
+            <p>
+                Discover carefully selected homes, apartments,
+                villas and premium properties designed to match
+                your lifestyle.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FILTER ================= -->
+
+    <section class="filter-section">
+
+        <div class="filter-container">
+
+            <button class="filter-btn active"
+                onclick="filterProperties('all', this)">
+                All Properties
+            </button>
+
+            <button class="filter-btn"
+                onclick="filterProperties('sale', this)">
+                For Sale
+            </button>
+
+            <button class="filter-btn"
+                onclick="filterProperties('rent', this)">
+                For Rent
+            </button>
+
+            <button class="filter-btn"
+                onclick="filterProperties('villa', this)">
+                Villas
+            </button>
+
+            <button class="filter-btn"
+                onclick="filterProperties('apartment', this)">
+                Apartments
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROPERTIES ================= -->
+
+    <section class="all-properties">
+
+
+        <div class="properties-header">
+
+            <div>
+
+                <h2>
+                    Premium Listings
+                </h2>
+
+                <p>
+                    Handpicked properties from Lahari's collection
+                </p>
+
+            </div>
+
+            <p>
+                6 Properties Available
+            </p>
+
+        </div>
+
+
+
+        <div class="property-grid">
+
+
+            <!-- PROPERTY 1 -->
+
+            <div class="property-card"
+                data-category="sale villa">
+
+                <div class="property-image">
+
+                    <img src="images/house1.jpg"
+                        alt="Luxury Modern Villa">
+
+                    <span class="property-tag">
+                        FOR SALE
+                    </span>
+
+                </div>
+
+
+                <div class="property-info">
+
+                    <h3>
+                        Luxury Modern Villa
+                    </h3>
+
+                    <p class="location">
+                        📍 Hyderabad, Telangana
+                    </p>
+
+
+                    <div class="property-details">
+
+                        <span>🛏 4 Beds</span>
+
+                        <span>🛁 3 Baths</span>
+
+                        <span>📐 3,200 Sq.Ft</span>
+
+                    </div>
+
+
+                    <div class="property-bottom">
+
+                        <strong>
+                            ₹2.45 Crore
+                        </strong>
+
+                        <a href="property-details.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROPERTY 2 -->
+
+            <div class="property-card"
+                data-category="sale apartment">
+
+                <div class="property-image">
+
+                    <img src="images/house2.jpg"
+                        alt="Premium Apartment">
+
+                    <span class="property-tag">
+                        FOR SALE
+                    </span>
+
+                </div>
+
+
+                <div class="property-info">
+
+                    <h3>
+                        Premium City Apartment
+                    </h3>
+
+                    <p class="location">
+                        📍 Vijayawada, Andhra Pradesh
+                    </p>
+
+
+                    <div class="property-details">
+
+                        <span>🛏 3 Beds</span>
+
+                        <span>🛁 2 Baths</span>
+
+                        <span>📐 1,850 Sq.Ft</span>
+
+                    </div>
+
+
+                    <div class="property-bottom">
+
+                        <strong>
+                            ₹98 Lakhs
+                        </strong>
+
+                        <a href="property-details.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROPERTY 3 -->
+
+            <div class="property-card"
+                data-category="rent villa">
+
+                <div class="property-image">
+
+                    <img src="images/house3.jpg"
+                        alt="Elegant Family Home">
+
+                    <span class="property-tag">
+                        FOR RENT
+                    </span>
+
+                </div>
+
+
+                <div class="property-info">
+
+                    <h3>
+                        Elegant Family Home
+                    </h3>
+
+                    <p class="location">
+                        📍 Visakhapatnam, Andhra Pradesh
+                    </p>
+
+
+                    <div class="property-details">
+
+                        <span>🛏 3 Beds</span>
+
+                        <span>🛁 3 Baths</span>
+
+                        <span>📐 2,400 Sq.Ft</span>
+
+                    </div>
+
+
+                    <div class="property-bottom">
+
+                        <strong>
+                            ₹45,000 / Month
+                        </strong>
+
+                        <a href="property-details.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROPERTY 4 -->
+
+            <div class="property-card"
+                data-category="sale apartment">
+
+                <div class="property-image">
+
+                    <img src="images/house4.jpg"
+                        alt="Luxury Apartment">
+
+                    <span class="property-tag">
+                        FOR SALE
+                    </span>
+
+                </div>
+
+
+                <div class="property-info">
+
+                    <h3>
+                        Skyline Luxury Apartment
+                    </h3>
+
+                    <p class="location">
+                        📍 Bangalore, Karnataka
+                    </p>
+
+
+                    <div class="property-details">
+
+                        <span>🛏 3 Beds</span>
+
+                        <span>🛁 3 Baths</span>
+
+                        <span>📐 2,100 Sq.Ft</span>
+
+                    </div>
+
+
+                    <div class="property-bottom">
+
+                        <strong>
+                            ₹1.35 Crore
+                        </strong>
+
+                        <a href="property-details.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROPERTY 5 -->
+
+            <div class="property-card"
+                data-category="rent apartment">
+
+                <div class="property-image">
+
+                    <img src="images/house5.jpg"
+                        alt="Modern Apartment">
+
+                    <span class="property-tag">
+                        FOR RENT
+                    </span>
+
+                </div>
+
+
+                <div class="property-info">
+
+                    <h3>
+                        Modern Urban Apartment
+                    </h3>
+
+                    <p class="location">
+                        📍 Hyderabad, Telangana
+                    </p>
+
+
+                    <div class="property-details">
+
+                        <span>🛏 2 Beds</span>
+
+                        <span>🛁 2 Baths</span>
+
+                        <span>📐 1,400 Sq.Ft</span>
+
+                    </div>
+
+
+                    <div class="property-bottom">
+
+                        <strong>
+                            ₹32,000 / Month
+                        </strong>
+
+                        <a href="property-details.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROPERTY 6 -->
+
+            <div class="property-card"
+                data-category="sale villa">
+
+                <div class="property-image">
+
+                    <img src="images/house6.jpg"
+                        alt="Premium Villa">
+
+                    <span class="property-tag">
+                        FOR SALE
+                    </span>
+
+                </div>
+
+
+                <div class="property-info">
+
+                    <h3>
+                        Grand Premium Villa
+                    </h3>
+
+                    <p class="location">
+                        📍 Guntur, Andhra Pradesh
+                    </p>
+
+
+                    <div class="property-details">
+
+                        <span>🛏 5 Beds</span>
+
+                        <span>🛁 4 Baths</span>
+
+                        <span>📐 4,500 Sq.Ft</span>
+
+                    </div>
+
+
+                    <div class="property-bottom">
+
+                        <strong>
+                            ₹3.25 Crore
+                        </strong>
+
+                        <a href="property-details.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+        <div>
+
+            <p>
+                CAN'T FIND WHAT YOU'RE LOOKING FOR?
+            </p>
+
+            <h2>
+                Let Us Find Your
+                <span>Dream Property.</span>
+            </h2>
+
+            <a href="contact.html"
+                class="primary-btn">
+
+                Contact Our Team
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+
+        <div class="footer-brand">
+
+            <h2>LAHARI'S</h2>
+
+            <p>
+                Real Estate Agency
+            </p>
+
+            <span>
+                Where Luxury Meets Your Lifestyle.
+            </span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Hyderabad, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉️ info@laharisrealestate.com
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Lahari's Real Estate Agency.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+
+    <!-- PROPERTY FILTER SCRIPT -->
+
+    <script>
+
+        function filterProperties(category, button) {
+
+            const properties =
+                document.querySelectorAll(".property-card");
+
+            const buttons =
+                document.querySelectorAll(".filter-btn");
+
+
+            /* Remove active class */
+
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            /* Add active class */
+
+            button.classList.add("active");
+
+
+            /* Filter properties */
+
+            properties.forEach(function(property) {
+
+                const categories =
+                    property.dataset.category;
+
+
+                if (
+                    category === "all" ||
+                    categories.includes(category)
+                ) {
+
+                    property.classList.remove("hidden");
+
+                } else {
+
+                    property.classList.add("hidden");
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
